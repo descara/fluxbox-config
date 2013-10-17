@@ -1,0 +1,107 @@
+# user defined menu system
+# ~/.fluxbox/usermenu
+
+[begin] (Fluxbox)
+[encoding] {UTF-8}
+      [exec] (uxterm) {uxterm}
+      [exec] (firefox) {firefox}
+      [exec] (RoxFiler) {rox}
+      [exec]   (Run) {fbrun}
+[submenu] (Net)
+[submenu] (Browsers)
+      [exec]   (firefox) {firefox}
+      [exec]   (links-graphic) {links -driver x fluxbox.org}
+      [exec]   (links) {uxterm -e links fluxbox.org}
+[end]
+[submenu] (Chat)
+      [exec]   (pidgin) {pidgin}
+      [exec]   (irssi) {uxterm -e irssi}
+[end]
+[submenu] (Mail)
+      [exec]   (mutt) {uxterm -e mutt}
+[end]
+[submenu] (FTP)
+      [exec]   (gftp) {gftp}
+      [exec]   (ncftp) {uxterm -e ncftp}
+      [exec]   (ftp) {uxterm -e ftp}
+      [exec]   (lftp) {uxterm -e lftp}
+[end]
+[submenu] (Analyzers)
+      [exec]   (xnmap) {xnmap}
+      [exec]   (nmapfe) {nmapfe}
+[end]
+      [exec]   (x3270) {x3270}
+      [exec]   (wpa_gui) {wpa_gui}
+[end]
+[submenu] (Editors)
+      [exec]   (gvim) {gvim}
+      [exec]   (nano) {uxterm -e nano}
+      [exec]   (vim) {uxterm -e vim}
+[end]
+[submenu] (File utils)
+      [exec] (RoxFiler) {rox}
+[end]
+[submenu] (Multimedia)
+[submenu] (Graphics)
+      [exec]   (gimp) {gimp}
+      [exec]   (xv) {xv}
+      [exec]   (xscreensaver-demo) {xscreensaver-demo}
+      [exec]   (xlock) {xlock}
+      [exec] (Mesa gears) {gears}
+[end]
+[submenu] (Audio)
+      [exec]   (aumix) {aumix}
+      [exec]   (alsamixer) {uxterm -e alsamixer}
+[end]
+[submenu] (X-utils)
+      [exec]   (xfontsel) {xfontsel}
+      [exec]   (xman) {xman}
+      [exec]   (xload) {xload}
+      [exec]   (xbiff) {xbiff}
+      [exec]   (editres) {editres}
+      [exec]   (viewres) {viewres}
+      [exec]   (xclock) {xclock}
+      [exec]   (xmag) {xmag}
+      [exec]   (wmagnify) {wmagnify}
+      [exec] (Reload .Xdefaults) {xrdb -load $HOME/.Xdefaults}
+[end]
+[end]
+[submenu] (Office)
+      [exec]   (xcalc) {xcalc}
+      [exec]   (xpdf) {xpdf}
+      [exec]   (gv) {gv}
+[end]
+[submenu] (System Tools)
+      [exec]   (top) {uxterm -e top}
+      [exec]   (htop) {uxterm -e htop}
+[end]
+[submenu] (Fluxbox menu)
+      [config] (Configure)
+[submenu] (System Styles) {Choose a style...}
+      [stylesdir] (/usr/share/fluxbox/styles)
+[end]
+[submenu] (User Styles) {Choose a style...}
+      [stylesdir] (~/.fluxbox/styles)
+[end]
+[submenu] (Wallpapers) {Choose a background...}
+    [wallpapers] (~/.fluxbox/backgrounds) {feh --bg-scale}
+    [wallpapers] (~/Pictures/wallpapers) {feh --bg-scale}
+[end]
+      [workspaces] (Workspace List)
+[submenu] (Tools)
+      [exec] (Window name) {xprop WM_CLASS|cut -d \" -f 2|xmessage -file - -center}
+      [exec] (Screenshot - JPG) {import screenshot.jpg && display -resize 50% screenshot.jpg}
+      [exec] (Screenshot - PNG) {import screenshot.png && display -resize 50% screenshot.png}
+      [exec] (Run) {fbrun}
+      [exec] (Regen Menu) {fluxbox-generate_menu}
+[end]
+      [exec] (Lock screen) {xlock}
+      [commanddialog] (Fluxbox Command)
+      [reconfig] (Reload config)
+      [restart] (Restart)
+      [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center}
+      [separator]
+      [exit] (Exit)
+[end]
+[endencoding]
+[end]

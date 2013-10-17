@@ -1,0 +1,22 @@
+-------------Fluxbox configuration
+
+Author: Reuben Joseph <rejnex@gmail.com>
+Version: 1.0
+
+Here are some applications that I think fit with 
+fluxbox's minimilistic philosophy
+
+-------------Suggested apps for fluxbox
+feh             :lighweight image viewer and wallpapers setter
+conky           :Everyone's favorite system monitor
+rox-filer       :lightweight file manager
+htop            :better looking top replacement
+xterm/uxterm    :default terminal emulator urxvt is another alternative
+dmenu           :minimalistic application launcher
+mutt            :curses based mail client (takes some time to configure)
+mpd             :The music player daemon
+sonata          :gtk+ based frontend to MPD
+
+
+
+
